@@ -1,0 +1,50 @@
+header, footer{
+  display:flex;
+  flex-flow:wrap;
+  }
+  h1{
+    border-bottom: 5px solid #000000;
+  }
+nav{
+  background: #eeee00;
+}
+ul{
+  list-style-type:none;
+  display: flex;
+  flex-direction:row;
+  background-color: LightGray;
+}
+li{
+  flex-grow:1
+}
+article{
+  background: #cfc;
+}
+
+.Face{
+  height: 50px;
+  width:50px;
+  text-align: center;
+  margin-bottom:60px;
+  margin-top:10px;
+  margin-left:25px;
+  float:right;
+}
+.Insta{
+  height: 50px;
+  width:50px;
+  text-align: center;
+  margin-bottom:60px;
+  margin-top:10px;
+  margin-left:25px;
+  float:right;
+}
+.Tweet{
+  height: 50px;
+  width:50px;
+  text-align: center;
+  margin-bottom:60px;
+  margin-top:10px;
+  margin-left:25px;
+  float:right;
+}
