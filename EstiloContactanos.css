@@ -30,6 +30,15 @@ li{
   margin-left:2%;
   float:left;
 }
+
+img {
+  width: 960px;
+  margin: 50px;
+}
+
+
+
+
 .Prod1, .Prod2, .Prod3, .Prod4{
   height: 220px;
   width:195px;
@@ -45,6 +54,9 @@ li{
 .bto1, .bto2, .bto3, .bto4{
   margin-top: 5%;
 }
+
+
+
 
 footer{
   height: 10%;
