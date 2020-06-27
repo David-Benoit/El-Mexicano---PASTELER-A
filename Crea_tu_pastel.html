@@ -68,8 +68,8 @@
           </section>
         </div>
         <div class="container">
-          <section class="main row">
-            <aside class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+          <section class="row">
+            <aside class="col-sm-3">
               <!--Menu de Personas-->
                     <div class="ModA">
                       <div class="dropdown">
@@ -77,9 +77,9 @@
                 # de Personas
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" id="diezp" href="#">10 Personas</a>
-                <a class="dropdown-item" id="trep" href="#">30 Personas</a>
-                <a class="dropdown-item" id="cinp" href="#">50 Personas</a>
+                <button class="dropdown-item" id="diezp" onclick="agregar10()">10 Personas</button>
+                <button class="dropdown-item" id="trep" onclick="agregar30()">30 Personas</button>
+                <button class="dropdown-item" id="cinp" onclick="agregar50()">50 Personas</button>
                 </div>
                 </div>
                     </div>
@@ -90,14 +90,12 @@
                     Rellenos
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" id="frutas" href="#">Frutas</a>
-                    <a class="dropdown-item" id="choco" href="#">Chocolate</a>
-                    <a class="dropdown-item" id="leche" href="#">tres Leches</a>
+                    <button class="dropdown-item" id="frutas" onclick="ref()">Frutas</button>
+                    <button class="dropdown-item" id="choco" onclick="rec()">Chocolate</button>
+                    <button class="dropdown-item" id="leche" onclick="ret()">tres Leches</button>
                     </div>
                     </div>
                     </div>
-
-
             <!--Menu de Decorado-->
             <div class="ModC">
               <div class="dropdown">
@@ -105,19 +103,58 @@
               Decorados
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" id="sencillo" href="#">Sencillo</a>
-              <a class="dropdown-item" id="decorado" href="#">Muy Decorado</a>
-              <a class="dropdown-item" id="especial" href="#">Especial</a>
+              <a class="dropdown-item" id="sencillo" onclick="des()">Sencillo</a>
+              <a class="dropdown-item" id="decorado" onclick="dem()">Muy Decorado</a>
+              <a class="dropdown-item" id="especial" onclick="dee()">Especial</a>
               </div>
             </div>
             </div>
             <div class="ModBot">
-            <button class="btn btn-secondary" type="button" id="Total"> Total
-            </div>
+              <div>
 
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
+                  Total
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                  <div class="modal-content">
+                  <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  </div>
+                  <div class="modal-body">
+                  <!--Carrito de compras-->
+                  <div class="col-sm-12">
+                    <aside class="row">
+                      <div class="alert alert-customC col-sm-12 text-center" role="alert" >Descripción</div>
+                      <li>Numero de personas es: </li>
+
+                      <hr>
+                      <div class="alert alert-customC col-sm-12 text-right" role="alert">Total: $<span id="total"></span></div>
+                    </aside>
+                  </div>
+                  <!--fin del carrito-->
+                  </div>
+                  <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Editar</button>
+                  <button type="button" class="btn btn-primary">Pagar</button>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+              </div>
+              <button class="btn btn-secondary" type="button" id="lipa" onclick="lim()"> Limpiar
+              </div>
+
+            <!--Imagenes de creado-->
             </aside>
-            <article class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-              <div class="ModD"> <div class="Produc1"> <img src="Images/1.jpg" alt=""> </div> </div>
+            <article class="col-sm-9">
+              <main id ="base" class="col-sm-12 row" >
+              </main>
             </article>
           </section>
         </div>
@@ -132,6 +169,8 @@
         </section>
       </div>
       </footer>
+      <script src="js/conducta_crea.json" type="text/javascript"></script>
+      <script src="js/conducta_crea.js" type="text/javascript"></script>
       <script src="js/Jquery.js" type="text/javascript">
       </script>
       <script src="js/bootstrap.min.js" type="text/javascript">
