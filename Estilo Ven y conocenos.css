@@ -13,7 +13,7 @@ ul{
   list-style-type:none;
   display: flex;
   flex-direction:row;
-  background: #ffff99;
+  background: #eec0c6;
   height: 100%;
   width: 100%;
   font-size: 5vh;
@@ -30,6 +30,7 @@ li{
   margin-bottom:40px;
   margin-left:2%;
   float:left;
+  color:#fefcbd;
 }
 .modE, .modF, .modG, .modH{
   height: 250px;
@@ -39,11 +40,13 @@ li{
   margin-bottom:40px;
   margin-left:2%;
   float:left;
+  color:#fefcbd;
 }
 .Prod1, .Prod2, .Prod3, .Prod4{
   height: 220px;
   width:195px;
   border:2px solid #000000;
+  color:#fefcbd;
   text-align: center;
   margin-top:1%;
   margin-left: 7%;
@@ -58,7 +61,8 @@ li{
   border:2px #F25DA1;
   text-align: left;
   margin-top:1%;
-  background-color: #B3EFF5;
+  background-color: #eec0c6;
+  color:#fefcbd;
   margin-left: 7%;
   float:inherit;
   background-size: 100% 100%;

@@ -16,10 +16,10 @@ ul{
   list-style-type:none;
   display: flex;
   flex-direction:row;
+  background: #eec0c6;
   height: 100%;
   width: 100%;
   font-size: 5vh;
-  background: #ffff99;
 }
 li{
   flex-grow:1;

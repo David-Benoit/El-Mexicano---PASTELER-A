@@ -127,6 +127,7 @@ function dee(){
 //total - Limpiar
 function calcularTotal(){
   var netv = valper+pf+pd;
+  alert('El Numero de personas es: '+nuperson+ 'El total por personas es: ' + valper +'el Relleno es de: '+relleno+'el valor del relleno es de: '+pf+'el tipo de decorado es: '+decorado+'el valor del decorado es:'+ pd+ 'el total del pastel es de: $ '+ netv )
   }
 function lim(){
   alert('hula');
