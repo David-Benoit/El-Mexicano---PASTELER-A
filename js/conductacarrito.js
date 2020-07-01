@@ -29,7 +29,7 @@ function mostrarProductosb(){
     unNodoTitle.textContent = pro.nombre;
 
     var unNodoImagen = document.createElement('img');
-    unNodoImagen.classList.add('img-fluid');
+    unNodoImagen.classList.add('img-fluid', 'rounded');
     unNodoImagen.setAttribute('src', pro.imagen,);
     unNodoImagen.style.width='200px';
     unNodoImagen.style.height='150px';
@@ -72,7 +72,7 @@ function mostrarProductose(){
     unNodoTitle.textContent = pro.nombre;
 
     var unNodoImagen = document.createElement('img');
-    unNodoImagen.classList.add('img-fluid');
+    unNodoImagen.classList.add('img-fluid', 'rounded');
     unNodoImagen.setAttribute('src', pro.imagen);
     unNodoImagen.style.width='200px';
     unNodoImagen.style.height='150px';
@@ -115,7 +115,7 @@ function mostrarProductoss(){
     unNodoTitle.textContent = pro.nombre;
 
     var unNodoImagen = document.createElement('img');
-    unNodoImagen.classList.add('img-fluid');
+    unNodoImagen.classList.add('img-fluid', 'rounded');
     unNodoImagen.setAttribute('src', pro.imagen);
     unNodoImagen.style.width='200px';
     unNodoImagen.style.height='150px';

@@ -21,6 +21,10 @@ ul{
   width: 100%;
   font-size: 5vh;
 }
+
+.bg-custome{
+  background-color: #eec0c6;
+}
 li{
   flex-grow:1;
 }
