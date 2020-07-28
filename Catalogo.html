@@ -2,10 +2,11 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link href="Principal.css" rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="EstiloCatalogo.css" rel="stylesheet" href="/css/master.css">
     <link rel="shortcut icon" type="Images/logo_patisseria.png" href="Images/logo_patisseria.png">
     <link  rel="stylesheet" href="css/bootstrap.min.css">
-    <title> Página Principal</title>
+    <title> Catálogo</title>
   </head>
   <body>
     <header>
@@ -65,6 +66,9 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
             <li class="nav-item">
+            <a class="nav-link" href="Pagina Principal.html">Inicio<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
             <a class="nav-link" href="Catalogo.html">Catálogo<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
@@ -81,23 +85,67 @@
             </ul>
             </div>
             </nav>
+
           </div>
           </section>
         </div>
+        <!--inicion de catalogo y carrito-->
         <div class="container">
-          <section class="main row">
-            <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <div class="modA"><div class="Prod1"><img class="rounded" src="Images/4.jpg"></div><button class="btn btn-secondary" href="Catalogo.html">Pastel 1</button></div>
-              <div class="modB"><div class="Prod2"><img class="rounded" src="Images/5.jpg"></div><button class="btn btn-secondary" href="Catalogo.html">Pastel 2</button></div>
-              <div class="modC"><div class="Prod3"><img class="rounded" src="Images/6.jpg"></div><button class="btn btn-secondary" href="Catalogo.html">Pastel 3</button></div>
-              <div class="modD"><div class="Prod4"><img class="rounded" src="Images/7.jpg"></div><button class="btn btn-secondary" href="Catalogo.html">Pastel 4</button></div>
-              <div class="modE"><div class="Prod5"><img class="rounded" src="Images/4.jpg"></div><button class="btn btn-secondary" href="Catalogo.html">Pastel 5</button></div>
-              <div class="modF"><div class="Prod6"><img class="rounded" src="Images/5.jpg"></div><button class="btn btn-secondary" href="Catalogo.html">Pastel 6</button></div>
-              <div class="modG"><div class="Prod7"><img class="rounded" src="Images/6.jpg"></div><button class="btn btn-secondary" href="Catalogo.html">Pastel 7</button></div>
-              <div class="modH"><div class="Prod8"><img class="rounded" src="Images/7.jpg"></div><button class="btn btn-secondary" href="Catalogo.html">Pastel 8</button></div>
-          </article>
-          </section>
+          <div class="container">
+            <hr>
+            <div class="row">
+              <div class="col-sm-11 row">
+                <main id ="productosb" class="col-sm-12 row" >
+                </main>
+                <main id ="productose" class="col-sm-12 row">
+                </main>
+                <main id ="productoss" class="col-sm-12 row">
+                </main>
+              </div>
+              <!--Bloque Modal para el carrito de compras-->
+
+              <div class=" col-sm-1">
+
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                  Ver Carrito
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                  <div class="modal-content">
+                  <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  </div>
+                  <div class="modal-body">
+                  <!--Carrito de compras-->
+                  <div class="col-sm-12">
+                    <aside class="row">
+                      <div class="alert alert-customC col-sm-12 text-center" role="alert">Carrito</div>
+                      <ul id="carrito" class="list-group"></ul>
+                      <hr>
+                      <div class="alert alert-customC col-sm-12 text-right" role="alert">Total: $<span id="total"></span></div>
+                    </aside>
+                  </div>
+                  <!--fin del carrito-->
+                  </div>
+                  <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Seguir Comprando</button>
+                  <button type="button" class="btn btn-primary">Pagar</button>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+
+      </div>
         </div>
+
+        <!--fin de ocupacion-->
         <footer>
           <div class="container">
         <section class="main row">
@@ -113,5 +161,7 @@
       </script>
       <script src="js/bootstrap.min.js" type="text/javascript">
       </script>
+      <script src="js/conductacarrito.json" type="text/javascript"></script>
+      <script src="js/conductacarrito.js" type="text/javascript"></script>
   </body>
 </html>
