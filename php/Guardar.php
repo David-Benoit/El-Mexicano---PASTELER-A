@@ -25,12 +25,15 @@ if ($mysqli -> connect_errno)  {
             $Guardar = !$mysqli -> query("INSERT INTO producto (IdProducto, nombre, precio, tipoadorno, tipoRelleno, numPersonas, existencia, imagen) VALUES
             ('$ID','$Nombre','$Precio','$Adorno','$Relleno','$Personas','$Cantidad', '$imgContent')");
             if($Guardar){
-                echo "File upload failed, please try again.";
-            }else{
                 echo "File uploaded successfully.";
+                include_once '../form1.html';
+            }else{
+                echo "File upload failed, please try again.";
+                include_once '../form1.html';
             }
         }else{
             echo "Please select an image file to upload.";
+            include_once '../form1.html';
         }
     }
 

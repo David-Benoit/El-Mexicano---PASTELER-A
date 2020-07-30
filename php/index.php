@@ -19,7 +19,6 @@ if(isset($_SESSION['user'])){
 
         include_once '../form1.html';
     }else{
-        echo "nombre de usuario y/o password incorrecto";
         $errorLogin = "Nombre de usuario y/o password es incorrecto";
         include_once 'Loginp.php';
     }

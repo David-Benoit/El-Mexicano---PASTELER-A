@@ -54,7 +54,7 @@ if(!$mysqli->query("DROP TABLE IF EXISTS cliente_reserva") ||
 //Tabla usuarios
 if(!$mysqli->query("DROP TABLE IF EXISTS usuarios") ||
 !$mysqli->query("CREATE TABLE usuarios(idusuario INT PRIMARY KEY, username VARCHAR(10), password VARCHAR(10))"))
-!$mysqli->query ("INSERT INTO usuarios VALUES(1,'BDA',MD5('Lapatti'))");
+!$mysqli->query ("INSERT INTO usuarios VALUES(1,'BDA','Lapatti')");
 {
   echo "Falló la creación de la Tabla usuarios: (".$mysqli->errno.")" .$mysqli->errno;
 }
