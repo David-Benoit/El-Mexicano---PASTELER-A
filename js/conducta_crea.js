@@ -304,7 +304,6 @@ function mostrard(){
 
 
 function lim(){
-  alert('hula');
   nuperson = 0;
   valper =0;
   relleno = "";
