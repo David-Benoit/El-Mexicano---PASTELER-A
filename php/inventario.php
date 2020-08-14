@@ -1,8 +1,5 @@
 <?php
-$mysqli = new mysqli ("localhost", "BDA", "Lapatti", "patisserie");
-if (mysqli_connect_errno()) {
-    printf("Falló la conexión: %s\n", mysqli_connect_error());
-    exit();
+include_once 'php/conexión.php';
 }
 ?>
 <!DOCTYPE html>
@@ -31,6 +28,7 @@ if (mysqli_connect_errno()) {
         			<th>Tiporelleno</th>
               <th>numPersonas</th>
               <th>existencia</th>
+              <th>categoria</th>
               <th>Imagen</th>
         		</tr>
         		<?php
@@ -46,6 +44,7 @@ if (mysqli_connect_errno()) {
         			<td><?php echo $mostrar['tipoRelleno'] ?></td>
               <td><?php echo $mostrar['numPersonas'] ?></td>
               <td><?php echo $mostrar['existencia'] ?> Pzs</td>
+              <td><?php echo $mostrar['categoria'] ?></td>
               <td></td>
         </td>
         		</tr>

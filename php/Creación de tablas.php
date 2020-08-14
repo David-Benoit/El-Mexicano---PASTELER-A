@@ -1,7 +1,13 @@
 <?php
-$mysqli = new mysqli ("localhost", "BDA", "Lapatti", "patisserie");
+$mysqli = new mysqli ("MYSQL5021.site4now.net", "a53efa_lapatti", "patopatoso2", "db_a53efa_lapatti");
 if ($mysqli -> connect_errno)  {
   echo "fallo al conectar a MySQL: (".$mysqli ->connect_errno . ")" . $mysqli ->connect_errno;
+}
+//Tabla Carrito
+if(!$mysqli->query("DROP TABLE IF EXISTS Carrito") ||
+!$mysqli->query("CREATE TABLE Carrito(nombre VARCHAR(25), precio INT, tipoAdorno VARCHAR (25), tipoRelleno VARCHAR (25), numPersonas INT, cantidad INT)"))
+{
+  echo "Falló la creación de la Tabla Producto: (".$mysqli->errno.")" .$mysqli->errno;
 }
 
 //Tabla Producto

@@ -1,15 +1,28 @@
 //declaración de variables
 var spTotal=document.getElementById("total");
 var listaCarro=document.getElementById("carrito");
-var carroSinRepetidosb = JSON.parse(basicos);
+var carroSinRepetidosb=JSON.parse(Prod_Basico);
 var carroSinRepetidose = JSON.parse(especiales);
 var carroSinRepetidoss = JSON.parse(expresarte);
 var productosXMLB = document.getElementById("productosb")
 var productosXMLE = document.getElementById("productose" )
 var productosXMLS = document.getElementById("productoss" )
-mostrarProductosb();
+//mostrarProductosb();
 mostrarProductose();
 mostrarProductoss();
+function hula(){
+  alert("hula");
+}
+function Datos(tmp_id, tmp_nombre,tmp_precio,tmp_cantidad){
+  var obj={
+    id:tmp_id,
+    nombre:tmp_nombre,
+    precio:tmp_precio,
+    cantidad:tmp_cantidad
+  }
+  carroSinRepetidosb.push(obj);
+  alert("hula");
+}
 //Funcions mostrar productos
 function mostrarProductosb(){
   var unNodoTitle = document.createElement('h5');
@@ -27,6 +40,7 @@ function mostrarProductosb(){
     var unNodoTitle = document.createElement('h5');
     unNodoTitle.classList.add('alert', 'alert-custom');
     unNodoTitle.textContent = pro.nombre;
+    unNodoTitle.name=pro.nombre;
 
     var unNodoImagen = document.createElement('img');
     unNodoImagen.classList.add('img-fluid', 'rounded');
@@ -141,13 +155,14 @@ function mostrarProductoss(){
   }
 }
 //Funcion Agregar carro
-function agregarCarro() {
-  if(this.getAttribute("marcador")>=1 && this.getAttribute("marcador")<=6){
-    carroSinRepetidosb[(this.getAttribute("marcador")-1)].cantidad++;}
-  if(this.getAttribute("marcador")>=7 && this.getAttribute("marcador")<=12){
-    carroSinRepetidose[(this.getAttribute("marcador")-7)].cantidad++;}
-  if(this.getAttribute("marcador")>=13 && this.getAttribute("marcador")<=20){
-    carroSinRepetidoss[(this.getAttribute("marcador")-13)].cantidad++;}
+function agregarCarro(tmp_this) {
+  alert(tmp_this.id);
+  if(this.getAttribute("id")>=1 && this.getAttribute("id")<=6){
+    carroSinRepetidosb[(this.getAttribute("id")-1)].cantidad++;}
+  //if(this.getAttribute("marcador")>=7 && this.getAttribute("marcador")<=12){
+    //carroSinRepetidose[(this.getAttribute("marcador")-7)].cantidad++;}
+  //if(this.getAttribute("marcador")>=13 && this.getAttribute("marcador")<=20){
+    //carroSinRepetidoss[(this.getAttribute("marcador")-13)].cantidad++;}
 
   calcularTotal();
   mostrarEnCarro();
@@ -170,11 +185,13 @@ function calcularTotal(){
 //función de texto en Aside
 function mostrarEnCarro(){
   listaCarro.textContent="";
+  listaCarro.name="lista"
   for(var objP of carroSinRepetidosb){
     if(objP.cantidad > 0){
       var nodoProductoEnCarro = document.createElement("li");
       nodoProductoEnCarro.classList.add("list-group-item","text-right","mx-2");
-      nodoProductoEnCarro.textContent = objP.cantidad + "-" + objP.nombre + "- $" + objP.precio;
+      nodoProductoEnCarro.textContent ="Id:" + objP.id+ "Cantidad:" +objP.cantidad + "Nombre:" + objP.nombre + "$" + objP.precio;
+      nodoProductoEnCarro.name="lista";
 
       var elBoton = document.createElement("button");
       elBoton.classList.add("btn","btn-danger", "mx-5");
