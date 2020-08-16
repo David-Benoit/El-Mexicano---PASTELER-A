@@ -137,6 +137,25 @@ iimg.classList.add("form-control-file")
 iimg.type="File";
 iimg.name="Imagen";
 
+//Categoría del Producto
+var dcap =document.createElement('div');
+
+var tcap =document.createElement('h5');
+tcap.textContent= "categoria del Producto";
+
+var scap = document.createElement('select');
+scap.classList.add('form-control', 'text-center');
+scap.name="categoria";
+
+var opcca1 = document.createElement('option')
+opcca1.textContent="Basico";
+var opcca2 = document.createElement('option')
+opcca2.textContent="Especial";
+var opcca3 = document.createElement('option')
+opcca3.textContent="Expresarte";
+var opcca4 = document.createElement('option')
+opcca4.textContent="Crea";
+
 
 //Invocar 1er renglón
     fid.appendChild(tid);
@@ -166,6 +185,8 @@ iimg.name="Imagen";
     dnp.appendChild(snp);
     dimg.appendChild(timg);
     dimg.appendChild(iimg);
+    dcap.appendChild(tcap);
+    dcap.appendChild(scap);
     str.appendChild(opctr1);
     str.appendChild(opctr2);
     str.appendChild(opctr3);
@@ -175,12 +196,17 @@ iimg.name="Imagen";
     snp.appendChild(opcnp1);
     snp.appendChild(opcnp2);
     snp.appendChild(opcnp3);
+    scap.appendChild(opcca1);
+    scap.appendChild(opcca2);
+    scap.appendChild(opcca3);
+    scap.appendChild(opcca4);
     nodoseis.appendChild(dtr);
     nodoseis.appendChild(sep);
     nodoseis.appendChild(dta);
     nodoseis.appendChild(sep1);
     nodoseis.appendChild(dnp);
     nodoseis.appendChild(dimg);
+    nodoseis.appendChild(dcap);
 //final
     formulario.appendChild(nodouno);
     formulario.appendChild(nodoseis);

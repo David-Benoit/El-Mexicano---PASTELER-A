@@ -1,9 +1,9 @@
 <?php
     //DB details
-    $dbHost     = 'localhost';
-    $dbUsername = 'BDA';
-    $dbPassword = 'Lapatti';
-    $dbName     = 'patisserie';
+    $dbHost     = 'MYSQL5021.site4now.net';
+    $dbUsername = 'a53efa_lapatti';
+    $dbPassword = 'patopatoso2';
+    $dbName     = 'db_a53efa_lapatti';
 
     //Create connection and select DB
     $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
@@ -14,7 +14,7 @@
     }
 
     //Get image data from database
-    $result = $db->query("SELECT imagen FROM producto");
+    $result = $db->query("SELECT imagen FROM producto WHERE idProducto=".$_GET["idProducto"]);
 
     if($result){
         $imgData = $result->fetch_assoc();
