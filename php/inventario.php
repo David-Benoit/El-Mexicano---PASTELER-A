@@ -1,6 +1,5 @@
 <?php
-include_once 'php/conexión.php';
-}
+include_once 'conexión.php';
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
