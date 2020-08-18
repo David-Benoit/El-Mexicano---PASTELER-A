@@ -18,7 +18,7 @@ include_once 'php/conexión.php';
       <h1>
         <section class="main row">
           <nav class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <div class="Logo"><a href="Pagina Principal.html"><input type="image", img src="Images/logo_patisseria.png" class="d-block w-100"></a></div>
+            <div class="Logo"><a href="pagina_principal.html"><input type="image", img src="Images/logo_patisseria.png" class="d-block w-100"></a></div>
           </nav>
           <nav class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
             <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="3500">
@@ -109,7 +109,7 @@ include_once 'php/conexión.php';
                    ?>
                      <div class="card-img-top col-sm-3 bg-transparent text-center">
                        <div class="card-body" >
-                         <?php echo "<img src='php/mirar.php?idProducto=".$mostrar["idProducto"]."' alt='imagenpaste' width=200px height=200px >"; ?>
+                         <?php echo "<img class='img-fluid rounded' src='php/mirar.php?idProducto=".$mostrar["idProducto"]."' alt='imagenpaste' width=200px height=150px >"; ?>
                          <h5 class="alert alert-custom" name="<?php $nombrep ?>"><?php echo $mostrar['nombre'] ?></h5>
                          <p class="alert alert-custom" name="<?php $preciop ?>">$<?php echo $mostrar['precio'] ?></p>
                          <button class='btn btn-primary' id='<?php echo $mostrar['idProducto'] ?>' onclick='agregarCarro(this)' >+</button>
@@ -128,7 +128,7 @@ include_once 'php/conexión.php';
                    ?>
                      <div class="card-img-top col-sm-3 bg-transparent text-center">
                        <div class="card-body" >
-                         <?php echo "<img src='php/mirar.php?idProducto=".$mostrar["idProducto"]."' alt='imagenpaste' width=200px height=200px >"; ?>
+                         <?php echo "<img class='img-fluid rounded' src='php/mirar.php?idProducto=".$mostrar["idProducto"]."' alt='imagenpaste' width=200px height=150px >"; ?>
                          <h5 class="alert alert-custom" name="<?php $nombrep ?>"><?php echo $mostrar['nombre'] ?></h5>
                          <p class="alert alert-custom" name="<?php $preciop ?>">$<?php echo $mostrar['precio'] ?></p>
                          <button class='btn btn-primary' id='<?php echo $mostrar['idProducto'] ?>' onclick='agregarCarro(this)' >+</button>
@@ -147,7 +147,7 @@ include_once 'php/conexión.php';
                    ?>
                      <div class="card-img-top col-sm-3 bg-transparent text-center">
                        <div class="card-body" >
-                         <?php echo "<img src='php/mirar.php?idProducto=".$mostrar["idProducto"]."' alt='imagenpaste' width=200px height=200px >"; ?>
+                         <?php echo "<img class='img-fluid rounded' src='php/mirar.php?idProducto=".$mostrar["idProducto"]."' alt='imagenpaste' width=200px height=150px >"; ?>
                          <h5 class="alert alert-custom" name="<?php $nombrep ?>"><?php echo $mostrar['nombre'] ?></h5>
                          <p class="alert alert-custom" name="<?php $preciop ?>">$<?php echo $mostrar['precio'] ?></p>
                          <button class='btn btn-primary' id='<?php echo $mostrar['idProducto'] ?>' onclick='agregarCarro(this)' >+</button>
