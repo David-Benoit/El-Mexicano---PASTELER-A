@@ -8,10 +8,10 @@ class DB{
     private $charset;
 
     public function __construct(){
-        $this->host     = 'localhost';
-        $this->db       = 'patisserie';
-        $this->user     = 'BDA';
-        $this->password = "Lapatti";
+        $this->host     = 'MYSQL5021.site4now.net';
+        $this->db       = 'db_a53efa_lapatti';
+        $this->user     = 'a53efa_lapatti';
+        $this->password = "patopatoso2";
         $this->charset  = 'utf8mb4';
     }
 
